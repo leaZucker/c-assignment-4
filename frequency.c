@@ -51,7 +51,7 @@ void addWord(node** root ,char* word){
 void printWordsMin(node* root, char *word){
     if(root){
         if(root->children[26]!=NULL)
-            printf("%s, %ld\n",word,root->count);
+            printf("%s %ld\n",word,root->count);
         int len = strlen(word);
         for(int i =0;i<NUM_LETTERS-1;i++){
             if(root->children[i]!=NULL){
@@ -68,7 +68,7 @@ void printWordsMin(node* root, char *word){
 void printWordsMax(node* root, char *word){
     if(root){
         if(root->children[26]!=NULL)
-            printf("%s, %ld\n",word,root->count);
+            printf("%s %ld\n",word,root->count);
         int len = strlen(word);
         for(int i = NUM_LETTERS-2;i>=0;i--){
             if(root->children[i]!=NULL){
